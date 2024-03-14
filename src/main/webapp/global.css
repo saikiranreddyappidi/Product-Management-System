@@ -2,13 +2,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: #E0E0E0; /* Light grey text for better contrast */
+    color: #E0E0E0;
 }
 
 body {
     margin-top: 20px;
-    background-color: #121212; /* Dark background */
-    color: #E0E0E0; /* Light grey text for better contrast */
+    background: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%);
+    color: #E0E0E0;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -21,60 +21,70 @@ body {
 h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #BB86FC; /* Soft purple for headings */
+    color: #BB86FC;
+    text-shadow: 0 0 10px #BB86FC, 0 0 20px #BB86FC, 0 0 30px #BB86FC, 0 0 40px #BB86FC;
 }
 
 table {
     width: 80%;
     border-collapse: collapse;
     margin-bottom: 1rem;
-    background-color: #333; /* Darker background for the table */
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 th, td {
     padding: 1rem;
     text-align: left;
-    border-bottom: 1px solid #555; /* Lighter line for separation */
+    border-bottom: 1px solid #555;
 }
 
 th {
-    background-color: #222; /* Even darker background for headers */
-    color: #FFD600; /* Bright yellow for header texts */
+    background-color: #222;
+    color: #FFD600;
 }
 
 input[type="text"], input[type="number"] {
     padding: 0.5rem;
     width: 300px;
     margin-bottom: 1rem;
-    background-color: #333;
-    border: 1px solid #444; /* Subtle borders for inputs */
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
     color: #E0E0E0;
 }
 
 button {
     padding: 0.75rem 1.5rem;
-    background-color: #03DAC5; /* Teal for buttons */
+    background-color: #03DAC5;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-    color: #000; /* Dark text on light background buttons */
+    transition: background-color 0.3s ease;
+    color: #000;
+    box-shadow: 0 0 10px #03DAC5, 0 0 20px #03DAC5, 0 0 30px #03DAC5, 0 0 40px #03DAC5;
 }
 
 button:hover {
-    background-color: #018786; /* Darker teal on hover */
+    background-color: #018786;
 }
 
 a {
-    display: inline-block; /* Align better with text */
+    display: inline-block;
     text-align: center;
     text-decoration: none;
     margin: 0.5rem;
     padding: 0.5rem 1rem;
     border-radius: 5px;
-    background-color: #BB86FC; /* Soft purple for links */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    background-color: #BB86FC;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 10px #BB86FC, 0 0 20px #BB86FC, 0 0 30px #BB86FC, 0 0 40px #BB86FC;
 }
 
 a:hover {
-    background-color: #3700B3; /* Darker purple on hover */
+    background-color: #3700B3;
 }
