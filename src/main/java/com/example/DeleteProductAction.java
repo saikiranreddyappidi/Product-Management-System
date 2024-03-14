@@ -17,34 +17,31 @@ public class DeleteProductAction extends ActionSupport {
 	}
 
 	public String post() {
-		Session session = FactoryProvider.getFactory().openSession();
-		Transaction tx = null;
 
-		try {
-			tx = session.beginTransaction();
+        Transaction tx = null;
+        try (Session session = FactoryProvider.getFactory().openSession()) {
+            tx = session.beginTransaction();
 
-			// Load the existing book from the database using ID
-			Product existingProduct = session.get(Product.class, id);
+            // Load the existing book from the database using ID
+            Product existingProduct = session.get(Product.class, id);
 
-			if (existingProduct != null) {
-				// Delete the book
-				session.remove(existingProduct);
+            if (existingProduct != null) {
+                // Delete the book
+                session.remove(existingProduct);
 
-				tx.commit();
-				addActionMessage("Product deleted successfully!");
-				return SUCCESS;
-			} else {
-				addActionError("Product not found with ID: " + id);
-				return ERROR;
-			}
-		} catch (Exception e) {
-			if (tx != null && tx.isActive()) {
-				tx.rollback();
-			}
-			addActionError("Error deleting Product: " + e.getMessage());
-			return ERROR;
-		} finally {
-			session.close();
-		}
-	}
+                tx.commit();
+                addActionMessage("Product deleted successfully!");
+                return SUCCESS;
+            } else {
+                addActionError("Product not found with ID: " + id);
+                return ERROR;
+            }
+        } catch (Exception e) {
+            if (tx != null && tx.isActive()) {
+                tx.rollback();
+            }
+            addActionError("Error deleting Product: " + e.getMessage());
+            return ERROR;
+        }
+    }
 }

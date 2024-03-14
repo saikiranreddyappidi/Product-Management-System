@@ -6,35 +6,29 @@ import org.hibernate.Transaction;
 
 import com.opensymphony.xwork2.ActionSupport;
 
+import java.io.Serial;
+
 
 public class addProductAction extends ActionSupport {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+	@Serial
+    private static final long serialVersionUID = 1L;
 	Product product = new Product();
 
     public String post() {
-        Session session = FactoryProvider.getFactory().openSession();
-        Transaction tx = null;
 
-        try {
+        Transaction tx = null;
+        try (Session session = FactoryProvider.getFactory().openSession()) {
             tx = session.beginTransaction();
             session.persist(product);
             tx.commit();
             addActionMessage("product added successfully!");
             return SUCCESS;
         } catch (Exception e) {
-            // Rollback the transaction in case of an exception
             if (tx != null && tx.isActive()) {
                 tx.rollback();
             }
-            // Handle any exceptions that occur during the book addition process
             addActionError("Error adding product: " + e.getMessage());
             return ERROR;
-        } finally {
-            // Close the Hibernate session
-            session.close();
         }
     }
 

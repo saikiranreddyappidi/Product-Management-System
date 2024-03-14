@@ -9,52 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <title>List of Products</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-        h1 {
-            color: #333;
-            text-align: center;
-            padding: 20px 0;
-            background-color: #3498db;
-            color: #fff;
-            margin: 0;
-        }
-        table {
-            width: 80%;
-            margin: 20px auto;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid #ccc;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        .container {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .btn {
-            margin-top: 10px;
-            text-decoration: none;
-            padding: 10px 20px;
-            background-color: #3498db;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .btn:hover {
-            background-color: #2980b9;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="global.css">
 </head>
 <body>
 <h1>List of Products</h1>
