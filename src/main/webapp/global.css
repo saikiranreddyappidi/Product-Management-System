@@ -61,12 +61,12 @@ input[type="text"], input[type="number"] {
 
 button {
     padding: 0.75rem 1.5rem;
-    background-color: #03DAC5;
+    background-color: #FF5733; /* updated color */
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
     color: #000;
-    box-shadow: 0 0 10px #03DAC5, 0 0 20px #03DAC5, 0 0 30px #03DAC5, 0 0 40px #03DAC5;
+    box-shadow: 0 0 10px #FF5733, 0 0 20px #FF5733, 0 0 30px #FF5733, 0 0 40px #FF5733; /* updated color */
 }
 
 button:hover {

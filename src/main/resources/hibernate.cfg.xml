@@ -7,7 +7,7 @@
 		<property name="connection.driver.class">com.mysql.jdbc.Driver</property>
 		<property name="connection.url">jdbc:mysql://localhost:3306/Allstruts</property>
 		<property name="connection.username">root</property>
-		<property name="connection.password">Pab2719100coc7!</property>
+		<property name="connection.password">${db.password}</property>
 		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name="hbm2ddl.auto">update</property>
 		<property name="show_sql">true</property>

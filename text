@@ -1,0 +1,10 @@
+to load the db properties
+
+Properties properties = new Properties();
+properties.load(new FileInputStream("db-credentials.properties"));
+
+Configuration configuration = new Configuration();
+configuration.configure("hibernate.cfg.xml");
+configuration.setProperty("connection.password", properties.getProperty("connection.password"));
+
+SessionFactory sessionFactory = configuration.buildSessionFactory();
